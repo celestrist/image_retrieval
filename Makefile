@@ -7,4 +7,7 @@ N = 10
 all: 
 
 extract:
-	python src/extract_patch.py data/images/level1/ data/patches.csv --n_patches=100 --size=6
+	python src/extract_patch.py data/images/level1/ data/patches.csv --n_patches=100 --size=5
+
+mapper:
+	python src/make_mapper.py data/patches.csv data/mapper.pkl --n_estimators=10	
