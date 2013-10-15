@@ -29,7 +29,7 @@ def max_pool(arr,agg):
     sQ = arr[:h/2,w/2:]
     tQ = arr[h/2:,:w/2]
     Q = arr[h/2:,w/2:]
-    return agg((fQ.sum(),sQ.sum(),tQ.sum(),Q.sum()))
+    return agg([fQ.sum(),sQ.sum(),tQ.sum(),Q.sum()])
             
 def split_randomly(arr,split_at=30):
     shuffle(arr)
